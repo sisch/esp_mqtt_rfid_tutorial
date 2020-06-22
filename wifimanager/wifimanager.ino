@@ -11,19 +11,6 @@ uint16_t chip = (uint16_t)(chip_id >> 32);
 const char* CONFIG_PASSWORD = "correct-horse-battery-staple";
 char ssid[17];
 
-// MQTT variables
-char mqtt_host[] = "10.0.0.60";
-char mqtt_port[] = "1883";
-char mqtt_topic[] = "devices/esp/status";
-
-// Initialize MQTT client
-WiFiClient wifi;
-IPStack ipstack(wifi);
-int MMMS = 50; // MAX_MQTT_MESSAGE_SIZE
-int MMPS = 1;  // MAX_MQTT_PARALLEL_SESSIONS
-MQTT::Client<IPStack, Countdown, MMMS, MMPS> client = MQTT::Client<IPStack, Countdown, MMMS, MMPS>(ipstack);
-MQTT::Message message; 
-
 void setup(){
   Serial.begin(115200);
   
@@ -42,6 +29,5 @@ void setup(){
 }
 
 void loop(){
-  Serial.println("Connected");
-  delay(4000);
+  
 }
