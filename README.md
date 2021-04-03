@@ -1,5 +1,5 @@
 # ESP32, MQTT, RFID tutorial
-I recently wrote a German tutorial (link follows) that describes on how to use an ESP to publish UIDs of RFID-tags into an MQTT topic. I wanted to have the ESP configurable in new environments, so I could easily ship pre-flashed boards to the users.
+I recently wrote a German tutorial (https://plantprogrammer.de/esp32-rfid-and-mqtt/) that describes on how to use an ESP to publish UIDs of RFID-tags into an MQTT topic. I wanted to have the ESP configurable in new environments, so I could easily ship pre-flashed boards to the users.
 The code in the tutorial sequentially builds the functionality and inserts glue code in the following order:
 * wifimanager
 * wifimanager_mqtt
