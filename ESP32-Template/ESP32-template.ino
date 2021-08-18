@@ -174,6 +174,15 @@ void array_to_string(byte array[], unsigned int len, char buffer[])
   buffer[len * 2] = '\0';
 }
 
+void messageArrived(MQTT::MessageData& md)
+{
+  Serial.println("received Message");
+  MQTT::Message &message = md.message;
+  char* msg = (char*)message.payload;
+  Serial.println(msg);
+}
+
+
 void setup()
 {
   Serial.begin(115200);

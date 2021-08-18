@@ -30,13 +30,13 @@ Download and install the following libraries in your Arduino IDE using the menu 
 * https://github.com/bblanchon/ArduinoJson
 
 ## Getting Started
-After installing all requirements, just download a copy of the ESP32-template folder, open the .ino file in Arduino IDE and check out lines 16, 152, and 264.
+After installing all requirements, just download a copy of the ESP32-template folder, open the .ino file in Arduino IDE and check out lines 16, 152, and 273.
 
 1. In line 16 you can decide whether to use encrypted communication through TLS (default) or not (comment this line then). If you want to use TLS, you need to add your certificates in the separate certs_available.h header file.
 
-2. In line 152 you can add subscribers to certain topics (defaults to the topic set in captive portal)
+2. In line 152 you can add subscribers to certain topics (defaults to the topic set in captive portal). Adapt the messageArrived function (line 177) to suit your needs.
 
-3. In line 264 you can publish messages (needs to be of type char*, if in doubt prepare a `char buffer[length]` and fill it with `snprintf(buffer, length, format, args...)`)
+3. In line 273 you can publish messages (needs to be of type char*, if in doubt prepare a `char buffer[length]` and fill it with `snprintf(buffer, length, format, args...)`)
 
 4. Upload the sketch to your ESP32
 
